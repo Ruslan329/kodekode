@@ -49,10 +49,120 @@ and open the template in the editor.
             
             
 <select class="form-select" aria-label="Default select example" name="typeactivit">
-  <option selected>Здесь должны быть в.д</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
+  <option selected>Здесь  в.д</option>
+<option>IT-сфера</option>
+<option>Администрирование</option>
+<option>Анализ данных</option>
+<option>Вебмастер</option>
+<option>Верстка и дизайн</option>
+<option>Компьютерный мастер</option>
+<option>Обработка данных</option>
+<option>Программист</option>
+<option>Техническая поддержка</option>
+<option>Автомойка</option>
+<option>Автосервис</option>
+<option>Автоэвакуация и буксировка</option>
+<option>Водитель</option>
+<option>Перевозка грузов</option>
+<option>Перевозка пассажиров</option>
+<option>Аренда</option>
+<option>Аренда квартир</option>
+<option>Аренда машин</option>
+<option>Предоставление лиценз</option>ий
+<option>Прокат</option>
+<option>Услуга по временному проживанию</option>
+<option>Услуга по хранению</option>
+<option>Ведение хозяйства</option>
+<option>Гувернантка</option>
+<option>Доставка</option>
+<option>Няня</option>
+<option>Повар</option>
+<option>Сиделка</option>
+<option>Социальная помощь</option>
+<option>Сторож</option>
+<option>Уборка и клининг</option>
+<option>Химчистка</option>
+<option>Животные</option>
+<option>Вакцинация животных</option>
+<option>Груминг</option>
+<option>Дрессировщик</option>
+<option>Кинология</option>
+<option>Передержка животных</option>
+<option>Уход за животными</option>
+<option>Здоровье</option>
+<option>Диетолог</option>
+<option>Консультирование</option>
+<option>Логопед</option>
+<option>Массажист</option>
+<option>Психолог</option>
+<option>Тренер, инструктор</option>
+<option>Информационные услуги</option>
+<option>Исследования</option>
+<option>Маркетинг, реклама</option>
+<option>Обрядовые услуги</option>
+<option>Опросы, сбор мнений</option>
+<option>Переводчик</option>
+<option>Красота</option>
+<option>Консультирование</option>
+<option>Косметолог</option>
+<option>Маникюр, педикюр</option>
+<option>Модель</option>
+<option>Парикмахер</option>
+<option>Стилист</option>
+<option>Тату и пирсинг</option>
+<option>Эпиляция</option>
+<option>Обучение</option>
+<option>Репетитор</option>
+<option>Тренер</option>
+<option>Учитель</option>
+<option>Общественное питание</option>
+<option>Кондитер</option>
+<option>Обслуживание</option>
+<option>Повар</option>
+<option>Одежда</option>
+<option>Модельер, дизайнер</option>
+<option>Пошив</option>
+<option>Ткани, кройка, шитьё</option>
+<option>Природа</option>
+<option>Благоустройство территории</option>
+<option>Животноводство</option>
+<option>Лес, охота, рыбалка</option>
+<option>Переработка отходов</option>
+<option>Приём или сдача лома</option>
+<option>Сельхоз услуги</option>
+<option>Прочее</option>
+<option>Грузчик</option>
+<option>Копирайтер</option>
+<option>Носильщик</option>
+<option>Обеспечение безопасности</option>
+<option>Писатель</option>
+<option>Платные туалеты</option>
+<option>Развлечения</option>
+<option>Аниматор</option>
+<option>Артист, певец, музыкант</option>
+<option>Ведущий, шоумен, тамада</option>
+<option>Гид, экскурсовод</option>
+<option>Ремонт</option>
+<option>Бытовой ремонт</option>
+<option>Дизайн</option>
+<option>Ремонт бытовой техники</option>
+<option>Ремонт квартир</option>
+<option>Реставрация</option>
+<option>Сантехник</option>
+<option>Строительство</option>
+<option>Техобслуживание</option>
+<option>Электрик</option>
+<option>Сделай сам</option>
+<option>Кузнец</option>
+<option>Металлообработка</option>
+<option>Проектирование</option>
+<option>Производственные услуги</option>
+<option>Столяр, плотник</option>
+<option>Услуги по сборке</option>
+<option>Спорт</option>
+<option>Консультирование</option>
+<option>Массажист</option>
+<option>Тренер, инструктор</option>
 </select>
              <label><b>Название</b></label>      
             <input type="text" placeholder="" name="name">
@@ -72,123 +182,119 @@ and open the template in the editor.
   <div class="container" style="background-color:#f1f1f1">
     <button type="button" class="cancelbtn">Отмена</button>
 <!-- 
-IT-сфера
-Администрирование
-Анализ данных
-Вебмастер
-Верстка и дизайн
-Компьютерный мастер
-Обработка данных
-Программист
-Техническая поддержка
-Авто
-Автомойка
-Автосервис
-Автоэвакуация и буксировка
-Водитель
-Перевозка грузов
-Перевозка пассажиров
-Аренда
-Аренда квартир
-Аренда машин
-Предоставление лицензий
-Прокат
-Услуга по временному проживанию
-Услуга по хранению
-Дом
-Бытовые услуги
-Ведение хозяйства
-Гувернантка
-Доставка
-Няня
-Повар
-Сиделка
-Социальная помощь
-Сторож
-Уборка и клининг
-Химчистка
-Животные
-Вакцинация животных
-Груминг
-Дрессировщик
-Кинология
-Передержка животных
-Уход за животными
-Здоровье
-Диетолог
-Консультирование
-Логопед
-Массажист
-Психолог
-Тренер, инструктор
-Информационные услуги
-Исследования
-Маркетинг, реклама
-Обрядовые услуги
-Опросы, сбор мнений
-Переводчик
-Красота
-Консультирование
-Косметолог
-Маникюр, педикюр
-Модель
-Парикмахер
-Стилист
-Тату и пирсинг
-Эпиляция
-Обучение
-Репетитор
-Тренер
-Учитель
-Общественное питание
-Кондитер
-Обслуживание
-Повар
-Одежда
-Модельер, дизайнер
-Пошив
-Ткани, кройка, шитьё
-Природа
-Благоустройство территории
-Животноводство
-Лес, охота, рыбалка
-Переработка отходов
-Приём или сдача лома
-Сельхоз услуги
-Прочее
-Грузчик
-Копирайтер
-Носильщик
-Обеспечение безопасности
-Писатель
-Платные туалеты
-Развлечения
-Аниматор
-Артист, певец, музыкант
-Ведущий, шоумен, тамада
-Гид, экскурсовод
-Ремонт
-Бытовой ремонт
-Дизайн
-Отделка
-Ремонт бытовой техники
-Ремонт квартир
-Реставрация
-Сантехник
-Строительство
-Техобслуживание
-Электрик
-Сделай сам
-Кузнец
-Металлообработка
-Проектирование
-Производственные услуги
-Столяр, плотник
-Услуги по сборке
-Спорт
-Консультирование
-Массажист
-Тренер, инструктор
+<option>IT-сфера</option>
+<option>Администрирование</option>
+<option>Анализ данных</option>
+<option>Вебмастер</option>
+<option>Верстка и дизайн</option>
+<option>Компьютерный мастер</option>
+<option>Обработка данных</option>
+<option>Программист</option>
+<option>Техническая поддержка</option>
+<option>Автомойка</option>
+<option>Автосервис</option>
+<option>Автоэвакуация и буксировка</option>
+<option>Водитель</option>
+<option>Перевозка грузов</option>
+<option>Перевозка пассажиров</option>
+<option>Аренда</option>
+<option>Аренда квартир</option>
+<option>Аренда машин</option>
+<option>Предоставление лиценз</option>ий
+<option>Прокат</option>
+<option>Услуга по временному проживанию</option>
+<option>Услуга по хранению</option>
+<option>Ведение хозяйства</option>
+<option>Гувернантка</option>
+<option>Доставка</option>
+<option>Няня</option>
+<option>Повар</option>
+<option>Сиделка</option>
+<option>Социальная помощь</option>
+<option>Сторож</option>
+<option>Уборка и клининг</option>
+<option>Химчистка</option>
+<option>Животные</option>
+<option>Вакцинация животных</option>
+<option>Груминг</option>
+<option>Дрессировщик</option>
+<option>Кинология</option>
+<option>Передержка животных</option>
+<option>Уход за животными</option>
+<option>Здоровье</option>
+<option>Диетолог</option>
+<option>Консультирование</option>
+<option>Логопед</option>
+<option>Массажист</option>
+<option>Психолог</option>
+<option>Тренер, инструктор</option>
+<option>Информационные услуги</option>
+<option>Исследования</option>
+<option>Маркетинг, реклама</option>
+<option>Обрядовые услуги</option>
+<option>Опросы, сбор мнений</option>
+<option>Переводчик</option>
+<option>Красота</option>
+<option>Консультирование</option>
+<option>Косметолог</option>
+<option>Маникюр, педикюр</option>
+<option>Модель</option>
+<option>Парикмахер</option>
+<option>Стилист</option>
+<option>Тату и пирсинг</option>
+<option>Эпиляция</option>
+<option>Обучение</option>
+<option>Репетитор</option>
+<option>Тренер</option>
+<option>Учитель</option>
+<option>Общественное питание</option>
+<option>Кондитер</option>
+<option>Обслуживание</option>
+<option>Повар</option>
+<option>Одежда</option>
+<option>Модельер, дизайнер</option>
+<option>Пошив</option>
+<option>Ткани, кройка, шитьё</option>
+<option>Природа</option>
+<option>Благоустройство территории</option>
+<option>Животноводство</option>
+<option>Лес, охота, рыбалка</option>
+<option>Переработка отходов</option>
+<option>Приём или сдача лома</option>
+<option>Сельхоз услуги</option>
+<option>Прочее</option>
+<option>Грузчик</option>
+<option>Копирайтер</option>
+<option>Носильщик</option>
+<option>Обеспечение безопасности</option>
+<option>Писатель</option>
+<option>Платные туалеты</option>
+<option>Развлечения</option>
+<option>Аниматор</option>
+<option>Артист, певец, музыкант</option>
+<option>Ведущий, шоумен, тамада</option>
+<option>Гид, экскурсовод</option>
+<option>Ремонт</option>
+<option>Бытовой ремонт</option>
+<option>Дизайн</option>
+<option>Ремонт бытовой техники</option>
+<option>Ремонт квартир</option>
+<option>Реставрация</option>
+<option>Сантехник</option>
+<option>Строительство</option>
+<option>Техобслуживание</option>
+<option>Электрик</option>
+<option>Сделай сам</option>
+<option>Кузнец</option>
+<option>Металлообработка</option>
+<option>Проектирование</option>
+<option>Производственные услуги</option>
+<option>Столяр, плотник</option>
+<option>Услуги по сборке</option>
+<option>Спорт</option>
+<option>Консультирование</option>
+<option>Массажист</option>
+<option>Тренер, инструктор</option>
 -->  </div>
             </div>
         </div>
