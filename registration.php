@@ -42,25 +42,27 @@ and open the template in the editor.
             <input type="text" placeholder="" name="phone">
             <!-- photo --> 
             <!-- pasportphoto --> 
-            <label><b>ИНН (Идентификационный Номер Налогоплательщика)</b></label>      
-            <input type="text" placeholder="" name="inn">
-            
-            <label><b>ОГРН (Основной Государственный Регистрационный Номер)</b></label>      
-            <input type="text" placeholder="" name="patronymic">
+            <!-- inn --> 
+            <!-- orn --> 
             <!-- oge --> 
             <label><b>Вид деятельности</b></label>      
-            <input type="text" placeholder="" name="typeactivit">
+            <select name="typeactivit">
+                <option value="admin">Администрирование</option>
+                <option value="analys">Aнализ данных</option>
+                <option value="webmaster">Вебмастер</option>
+                <option value="verstka">Верстка и дизайн</option>
+                <option value="kompmaster">Комьютерный мастер</option>
+                <option value="obrabotka">Обработка данных</option>
+                <option value="coder">Программист</option>
+                <option value="poddershka">Тех. поддержка</option>
+            </select>
             <!-- status -->
-            <div class="dropdown">
-                <a class="" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
-                Ссылка выпадающего списка
-                </a>
-                <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Действие</a></li>
-                    <li><a class="dropdown-item" href="#">Другое действие</a></li>
-                    <li><a class="dropdown-item" href="#">Что-то еще здесь</a></li>
-                </ul>
-            </div>
+            <label><b>Пароль</b></label>      
+            <input type="text" placeholder="" name="pass">
+            
+            <label><b>Повтор пароля</b></label>      
+            <input type="text" placeholder="" name="repeatPass">
+          
             <button type="submit">Зарегистрироватся</button>  
         </div>
 
