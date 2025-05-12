@@ -12,15 +12,9 @@ class Registration extends DB{
   }
 //-------------------------------------------------  
   public function registr($data){
-    $this->pass = $data['pass'];
+    $this->pass = $data['password'];
     $this->login = $data['login'];
-    $this->name = $data['name'];
-    $this->surname = $data['surname'];
-    $this->patronymic = $data['patronymic'];
-    $this->phone = $data['phone'];
-    $this->typeactivit = $data['typeactivit'];
-
-    $this->repeatPass = $data['repeatPass'];
+    $this->repeatPassword = $data['repeatPassword'];
     return $this->validate();    
   }    
 //------------------------------------------------- 
@@ -35,7 +29,7 @@ class Registration extends DB{
           //Проверка на существование аккаунта  
           //$param3 = "SELECT * FROM `hovers` WHERE hover > '$time'";           
           //$param =  "SELECT name FROM `users` WHERE  name = '$this->login'";       
-          $count = $this->db->query("SELECT COUNT(id) FROM `users` WHERE name= '$this->login'")->fetchColumn();
+          $count = $this->db->query("SELECT COUNT(id) FROM `Users` WHERE name= '$this->login'")->fetchColumn();
           if($count == false){
             $this->dbReg();         
           }else{  
@@ -56,7 +50,7 @@ class Registration extends DB{
   public function dbReg(){
 
     //запрос на создание аккаунта
-    $param = "INSERT INTO users (login, name, surname, patronymic, phone, typeactivit, pass) VALUES ('$this->login', '$this->name', '$this->surname', '$this->patronymic', '$this->phone', '$this->typeactivit', '$this->pass',)";
+    $param = "INSERT INTO Users (login, name, surname, patronymic, phone, typeactivit, pass) VALUES ('$this->login', '$this->name', '$this->surname', '$this->patronymic', '$this->phone', '$this->typeactivit', '$this->pass',)";
     try{
       $ex = $this->db->prepare($param);
       $ex->execute();
@@ -80,74 +74,3 @@ class Registration extends DB{
   }
 //------------------------------------------------- 
 }
-
-
-
-
-
-
-
-/*
-class Registration extends DB{
-
-  public $db, $pass, $login, $loged;
-//------------------------------------------------- 
-  public function  __construct() {
-    $this->db = parent:: __construct();   
-  }
-//-------------------------------------------------  
-  public function registr($data){
-    
-    if($data['password'] == $data['repeatPassword']){$this->dbReg($data);} 
-    else{
-      echo "Пароли не совпадают! Попробуйте еще раз.";
-    }       
-  }    
-  private function validate(){
-    //Проверка на совпадение паролей
-    if($data['password'] == $data['repeatPassword'])
-    {
-      $this->dbReg($data);
-    }else{
-      echo "Пароли не совпадают! Попробуйте еще раз.";
-    }  
-    //сделать проверку на занятость логина 
-    //сделать проверку на кол-во введенных символов
-    //сделать проверку на разнообразие символов используя pregmatch
-  } 
-//------------------------------------------------- 
-  public function dbReg($data){
-    //логин и пароль
-    $this->pass = $data['password'];
-    $this->login = $data['login'];
-    //запрос на создание аккаунта
-    $param = "INSERT INTO users (name, pass, data) VALUES ('$this->login', '$this->pass', 'time')";
-    try{
-      $ex = $this->db->prepare($param);
-      $ex->execute();
-      $count = $ex->rowCount();	
-      if(0 === $count){}
-      elseif(1 ===$count){  
-        $_SESSION['user'] = $this->login;
-        $this->loged();
-      }
-    }
-    catch(PDOException $e){  echo $e;}  
-  }
-//------------------------------------------------- 
-  public function loged(){
-    if(isset( $_SESSION['user'])){
-      header('Location: http://sitestart/loged');
-    }
-    else{
-      header('Location: http://sitestart/registration');
-    }
-  }
-//------------------------------------------------- 
-}
-
-
-  */
-
-
-  
