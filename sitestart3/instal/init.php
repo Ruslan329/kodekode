@@ -1,0 +1,1 @@
+<?php define("DBUSERNAME", "root"); define("DBUSERNAME", "root");define("DBPASSWORD", "root"); define("DBUSERNAME", root);define("DBPASSWORD", ); define("DBUSERNAME", root);define("DBPASSWORD", ); define("DBUSERNAME", root);define("DBPASSWORD", ); define("DBUSERNAME", root);define("DBPASSWORD", ); define("DBUSERNAME", root);define("DBPASSWORD", );

@@ -1,0 +1,1 @@
+ <?php define("DBUSERNAME", root); define("DBPASSWORD", root); define("HOST", localhost); define("DB", dbsite); ?> <?php define("DBUSERNAME", root); define("DBPASSWORD", root); define("HOST", localhost); define("DB", dbsite); ?> <?php define("DBUSERNAME", root); define("DBPASSWORD", root); define("HOST", localhost); define("DB", dbsite); ?>
