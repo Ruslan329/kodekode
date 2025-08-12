@@ -73,7 +73,7 @@ class Registration extends DB{
       if(0 === $count){}
       elseif(1 ===$count){  
         $_SESSION['user'] = $this->login;
-        
+        $_SESSION['pass'] = $this->pass;
         $this->loged();
       }
     }
