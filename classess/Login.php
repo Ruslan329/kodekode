@@ -31,6 +31,7 @@ class Login extends DB{
     $count = $this->db->query("SELECT COUNT(id) FROM `users` WHERE login = '$this->login' AND pass = '$this->pass' ")->fetchColumn();
     if($count == true){
       $_SESSION['user'] = $this->login;
+      $_SESSION['pass'] = $this->pass;
       if(isset( $_SESSION['user'])){
         header('Location: http://sitestart/loged');
       }     
@@ -40,6 +41,7 @@ class Login extends DB{
   }
 
 }
+
 
 
 
