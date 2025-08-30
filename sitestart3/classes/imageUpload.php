@@ -21,7 +21,7 @@ namespace classes;
             $this->new_name = 'avatar_'.$_SESSION['user'].'.jpeg';
             $_SESSION['avatar'] = "avatar";
             //Записываем $time в $this->id_foto и получаем идентификатор фото
-            $this->id_foto = $time;
+           // $this->id_foto = $time;
         }
         //Функция fileSize()
         private function fileSize(){
@@ -91,28 +91,31 @@ namespace classes;
             //Удаляем изображение imagejpeg
             imagedestroy($image_new);
             //Возвращаем true
+            
             return true;
         }
         //Функция upload()
         public function upload(){
             //Проверка на ошибки, если код ошибки 0 то $error = false 
-            $result = array();      
+         //   $result = array();      
 	    $error = $this->errors();
             //Если ошибок нет, то... 
             if(false == $error){  
                 
                 $this->resize(100, $this->new_name);
    
-                $result = $this->id_foto;
+               // $result = $this->id_foto;
      
-                return $result." <br /> Фаил успешно загружен"; 
+            // было    return $result." <br /> Фаил успешно загружен"; 
+           return "<div><img id ='i' class='' src='i/avatar_".$_SESSION['user'].".jpeg' /></div>";
+           
+           
+           
             } 
         
             else{ 
                             
-                $result = $error; 
-          
-                return $result;                   
+             return $error;                 
             }
         }
         //--------------------------------------------------------------------------
