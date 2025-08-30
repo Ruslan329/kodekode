@@ -9,12 +9,14 @@ require_once 'settings/init.php';
 
 //print_r($_POST);
 
-//if(isset($_POST['action'])){ echo "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!";}
+//if(isset($_POST['action'])){ echo "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"; exit();}
 
 $obj = new Controller;
 $result = $obj->result();
+define("RESULT", $result);
+if(isset($_POST['ajax'])){ echo RESULT; exit; }
 
-echo $_SESSION['user']."!!!";
+echo $_SESSION['user'];
 echo $_SESSION['pass'];
 echo $_SESSION['updatepass'];
 print_r($_POST);
@@ -24,7 +26,7 @@ print_r($_POST);
      
 
       
-define("RESULT",    $result);
+//define("RESULT",    $result);
 
 //-----------------------------------
 
