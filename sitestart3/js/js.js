@@ -8,7 +8,7 @@ $(document).ready(function(){
 
 
     
-$('#image').css('opacity',0);   
+//$('#image').css('opacity',0);   
 //$('#imageUploadBlock').css('display', 'block');
        ///////////////////////////////////
 //$('#fileInput').html("<input  type='file' style='opacity: 0; position: absolute; margin-top: -53px;' id='image' name='file' />");
@@ -16,6 +16,24 @@ $('#image').css('opacity',0);
 
 
 
+ var fileReal = $('#fileReal').val();
+if(fileReal != "false"){ 
+        
+var i = fileReal+".jpeg?anti_cache=" + Math.random();
+var img  = "<img class='' src='"+i+"' />";
+    
+    //alert(img);
+$('.res').html(img).show();
+$('#delitImage').show();
+$('#uploadImage').hide();
+$('#fileInput').hide();
+}
+else{
+$('#delitImage').hide();  
+$('.res').hide();
+$('#uploadImage').show();
+
+}
 //$('#buttonBlock').html("<div class='buttonImageUploadLogoElement' style='text-align: center;' id='uploadImage'>Логотип сайта</div>");
 //$('$fileInput').html("<input  type='file' style='position: absolute; margin-top: -53px;' id='image' name='file' />");
     ////////////////////////////////////////////////////////////////
@@ -32,17 +50,41 @@ $('#image').change(function () {
        url: '',
        data: data,
        type: 'POST',
-       cache: false,
+      cache: false,
        contentType: false,
        processData: false, 
-               // dataType: 'json',
+       dataType: 'json',
        beforeSend: function () {
           $('.res').html("<img class='' src='img/loading.gif' />").show(); 
        },
        success: function (data) {
-$('#buttonBlock').html("<div class='buttonImageUploadLogoElement' style='text-align: center;' id='delitImage'>Удалить фото</div>");
-$('.res').html(data);
- $('#fileInput').remove();      
+
+
+$('#delitImage').show();
+$('#uploadImage').hide();
+//"<div><img id ='i' class='' src='i/avatar_".$_SESSION['user'].".jpeg' /></div>";
+//var img = data['2']+".jpeg?anti_cache=" + Math.random();
+//"<div><img id ='i' class='' src='i/avatar_".$_SESSION['user'].".jpeg' /></div>";
+
+//var avatar = data.split('_');
+//alert(avatar['0']);
+//var imagesStr = 'i/avatar';
+//var imagesStr2 =  avatar['0'];
+//alert(avatar['0']+'-'+imagesStr);
+
+           //if(imagesStr2.text() == imagesStr.text()){
+    //var i = data+".jpeg?anti_cache=" + Math.random();
+ //  alert('avatarh');
+//}
+    
+var i = data['0']+".jpeg?anti_cache=" + Math.random();
+var img  = "<img class='' src='"+i+"' />";
+//alert(img);
+$('.res').html(img).show();
+
+ //$('#fileInput').remove();  
+ $('#fileInput').hide();
+ 
        }
     
     });
@@ -51,11 +93,11 @@ $('.res').html(data);
 
 
 
-$("#delitImage").on("click", function() { 
+$("#delitImage").click(function(){
   //  alert('test');
    var action = "classes/imageUpload/delete";
    var ajax = "ajax";
-   $.ajax({
+       $.ajax({
        url: '',
        type: 'POST',
        data:{action: action, ajax: ajax},
@@ -63,9 +105,11 @@ $("#delitImage").on("click", function() {
           $('.res').html("<img class='' src='img/loading.gif' />").show(); 
        },
        success: function (data) {
-$('#buttonBlock').html("<div class='buttonImageUploadLogoElement' style='text-align: center;' id='uploadImage'>Загрузить логотип</div>");
-$('.res').html(data);
- $('#fileInput').html("<input  type='file' style='opacity: 0; position: absolute; margin-top: -53px;' id='image' name='file' />");      
+$('#uploadImage').show();
+$('#delitImage').hide();
+$('.res').hide(); 
+//$('#fileInput').html("<input  type='file' style='opacity: 0; position: absolute; margin-top: -53px;' id='image' name='file' />").show();    
+$('#fileInput').show(); 
        }
     
     });
