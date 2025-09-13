@@ -5,6 +5,9 @@
         <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css"> 
         <link rel="stylesheet" href="template/css/style.css">   
         <link rel="stylesheet" href="template/css/styleUpload.css"> 
+        <script type="text/javascript" src="jquery/jquery-3.7.1.min.js"></script> 
+        <script type="text/javascript" src="js/js.js"></script>
+     
     </head>
     <body><h1><?php  echo RESULT;
     ?></h1>
@@ -28,12 +31,40 @@
             <div class="container" style="">
           <h5><?php echo $result['login']."<br>" ?></h5>    
             
-       
-          <form>    <div id="buttonBlock"><div class="buttonImageUploadLogoElement" style="text-align: center;">
-                      Логотип сайта </div></div>
+ 
+          
+          
+          
+          
+          <form>    <div id="buttonBlock">
+                <div class="buttonImageUploadLogoElement" style="text-align: center;" id="uploadImage">
+                      Логотип сайта </div>
+                    <div class='buttonImageUploadLogoElement' style='text-align: center;' id='delitImage'>
+                      Удалить фото</div>
+              </div>
+              
+        <?php
+        $path = 'i/avatar_'.$_SESSION['user'].'.jpeg';     
+        if(!file_exists($path)){           
+        ?>    
+<input type="hidden" id="fileReal" name="fileReal" value = "false">  
+        
+        <?php
+        }
+        elseif(file_exists($path)){
+        ?>              
+<input type="hidden" id="fileReal" name="fileReal" value = "i/avatar_<?php echo $_SESSION['user']; ?>">  
+        <?php
+        }
+        ?>
+              
+              
+              
+                <!-- <div class='buttonImageUploadLogoElement' style='text-align: center;' id='delitImage'>
+                      Удалить фото</div>-->
      <input type="hidden" id="action" name="action" value = 'classes/imageUpload/upload'>     
      <input type="hidden" id="ajax" name="ajax" value='ajax'>            
-     <h3 id="fileInput"><input  type='file' style=' position: absolute; margin-top: -53px;' id='image' name='file' /></h3>
+     <h2 id="fileInput"><input  type='file' style='opacity: 0; position: absolute; margin-top: -53px;' id='image' name='file' /></h2>
                 
      <div class='res'></div>
      <div class='delite'></div>        
