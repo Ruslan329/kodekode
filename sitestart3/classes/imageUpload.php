@@ -7,7 +7,7 @@ namespace classes;
     //Класс imageUpload
     class imageUpload{
         //Переменные
-        public  $new_name, $getimagesize, $id_foto, $id_cons; 
+        public  $new_name, $getimagesize, $id_foto, $id_cons, $result = array(); 
         //Функция __construct()
         public function __construct(){
             //Если файл загружен, то...
@@ -107,20 +107,29 @@ namespace classes;
                // $result = $this->id_foto;
      
             // было    return $result." <br /> Фаил успешно загружен"; 
-           return "<div><img id ='i' class='' src='i/avatar_".$_SESSION['user'].".jpeg' /></div>";
+                
+                
+                
+          // return "i/avatar_".$_SESSION['user'];
            
-           
-           
+          $this->result['0'] = "i/avatar_".$_SESSION['user'];
+          //еденица просто значит что файл загружен (маркер)
+          $this->result['1']=1;
+          
+          return json_encode($this->result);
             } 
         
             else{ 
+          $this->result['0'] = $error;
+          $this->result['1'] = 0;
                             
-             return $error;                 
+             return json_encode($this->result);                 
             }
         }
         //--------------------------------------------------------------------------
         public function delete(){
             unlink('i/avatar_'.$_SESSION['user'].'.jpeg');
+            return json_encode("Фото удалено"); 
         }
         //--------------------------------------------------------------------------
     }
