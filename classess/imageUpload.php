@@ -7,7 +7,7 @@ namespace classes;
     //Класс imageUpload
     class imageUpload{
         //Переменные
-        public  $new_name, $getimagesize, $id_foto, $id_cons; 
+        public  $new_name, $getimagesize, $id_foto, $id_cons, $result = array(); 
         //Функция __construct()
         public function __construct(){
             //Если файл загружен, то...
@@ -18,9 +18,10 @@ namespace classes;
             //Записываем в $time текущее время
             $time = time();
             //Записываем $time в $this->new_name + .jpeg и получаем новое название файла
-            $this->new_name = $time.'.jpeg';
+            $this->new_name = 'avatar_'.$_SESSION['user'].'.jpeg';
+            $_SESSION['avatar'] = "avatar";
             //Записываем $time в $this->id_foto и получаем идентификатор фото
-            $this->id_foto = $time;
+           // $this->id_foto = $time;
         }
         //Функция fileSize()
         private function fileSize(){
@@ -90,30 +91,47 @@ namespace classes;
             //Удаляем изображение imagejpeg
             imagedestroy($image_new);
             //Возвращаем true
+            
             return true;
         }
         //Функция upload()
         public function upload(){
             //Проверка на ошибки, если код ошибки 0 то $error = false 
-            $result = array();      
+         //   $result = array();      
 	    $error = $this->errors();
             //Если ошибок нет, то... 
             if(false == $error){  
                 
                 $this->resize(100, $this->new_name);
    
-                $result = $this->id_foto;
+               // $result = $this->id_foto;
      
-                return $result." <br /> Фаил успешно загружен"; 
+            // было    return $result." <br /> Фаил успешно загружен"; 
+                
+                
+                
+          // return "i/avatar_".$_SESSION['user'];
+           
+          $this->result['0'] = "i/avatar_".$_SESSION['user'];
+          //еденица просто значит что файл загружен (маркер)
+          $this->result['1']=1;
+          
+          return json_encode($this->result);
             } 
         
             else{ 
+          $this->result['0'] = $error;
+          $this->result['1'] = 0;
                             
-                $result = $error; 
-          
-                return $result;                   
+             return json_encode($this->result);                 
             }
         }
+        //--------------------------------------------------------------------------
+        public function delete(){
+            unlink('i/avatar_'.$_SESSION['user'].'.jpeg');
+            return json_encode("Фото удалено"); 
+        }
+        //--------------------------------------------------------------------------
     }
     //Создаем объект класса imageUpload
     //////////$obj = new imageUpload;
