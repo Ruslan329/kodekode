@@ -1,0 +1,42 @@
+
+.buttonImageUploadLogo {
+  text-align: center;
+   
+}
+
+
+
+/* Set a style for all buttons */
+.buttonImageUploadLogoElement {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    text-align: center;
+}
+
+/* Add a hover effect for buttons */
+.buttonImageUploadLogoElement:hover {
+    opacity: 0.8;
+}
+
+
+
+
+
+
+
+html{
+ background: #fff no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+background-attachment:fixed;
+}
+
+
+
